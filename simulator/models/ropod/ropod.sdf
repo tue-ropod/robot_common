@@ -230,7 +230,7 @@
       -->
       
   
-    <sensor type="gpu_ray" name="head_hokuyo_sensor">
+      <sensor type="ray" name="head_hokuyo_sensor"> <!-- GPU-ray GPU-VERSION HAD PROBLEMS WITH RANGES SUDDENLY CHANGEING -->
       <pose>0.25 0 0.25 0 0 0</pose>
       <visualize>true</visualize>
       <update_rate>30</update_rate>
@@ -252,10 +252,10 @@
           <type>gaussian</type>
           
           <mean>0.0</mean>
-          <stddev>0.01</stddev>
+          <stddev>0.00</stddev>
         </noise>
       </ray>
-      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so"> <!-- libgazebo_ros_gpu_laser GPU-VERSION HAD PROBLEMS WITH RANGES SUDDENLY CHANGEING --> 
         <topicName>/ropod/laser_sim</topicName>
          <frameName>/ropod/laser/scan</frameName>
       </plugin>

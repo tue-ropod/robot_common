@@ -35,7 +35,7 @@ class AnimatedCylinder2 : public ModelPlugin
               // name the animation "test",
               // make it last 10 seconds,
               // and set it on a repeat loop
-              new gazebo::common::PoseAnimation("test", 10.0, true));
+              new gazebo::common::PoseAnimation("test", 30.0, true));
 
         gazebo::common::PoseKeyFrame *key;
 
@@ -45,14 +45,14 @@ class AnimatedCylinder2 : public ModelPlugin
         key->Rotation(ignition::math::Quaterniond(0, 0, 0));
 
         // set waypoint location after 2 seconds
-        key = anim->CreateKeyFrame(5.0);
+        key = anim->CreateKeyFrame(15.0);
 //         key->Translation(ignition::math::Vector3d(-50, -50, 0));
 //         key->Rotation(ignition::math::Quaterniond(0, 0, 1.5707));
         key->Translation(ignition::math::Vector3d(-8.0, 3.1, 0));
         key->Rotation(ignition::math::Quaterniond(0, 0, 0));
 
 // set final location equal to starting location
-        key = anim->CreateKeyFrame(10.0);
+        key = anim->CreateKeyFrame(30.0);
 //         key->Translation(ignition::math::Vector3d(10, 20, 0));
 //         key->Rotation(ignition::math::Quaterniond(0, 0, 1.5707));
         key->Translation(ignition::math::Vector3d(-4.3, 1.9, 0));
