@@ -1,5 +1,0 @@
-to recompile run:
-
-cd build
-cmake ..
-make
