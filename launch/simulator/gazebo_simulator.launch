@@ -4,21 +4,14 @@
 	<env name="GAZEBO_MODEL_PATH" value="$(find robot_common)/simulator/models:$(optenv GAZEBO_MODEL_PATH)"/>
 	<env name="GAZEBO_RESOURCE_PATH" value="$(find robot_common)/simulator:$(optenv GAZEBO_RESOURCE_PATH)"/>
         <env name="GAZEBO_PLUGIN_PATH" value="$(env CATKIN_WORKSPACE)/devel/lib:$(optenv GAZEBO_PLUGIN_PATH)"/>
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 	<!--<env name="GAZEBO_MODEL_DATABASE_URI" value="" /> THIS VARIABLE SHOULD BE CHANGED LOCALLY, 
 	see http://cstwiki.wtb.tue.nl/index.php?title=RoPod/Tutorials/GAZEBO_installation_and_interface_with_ROS/Faster statup of Gazebo -->
 	
 	<arg name="robot" default="pico"/>
 	<arg name="model_name" default="pico"/> 
 	<arg name="model_path" />
-<<<<<<< HEAD
-        <arg name="movingObjects" default="false"/>
-=======
         <arg name="movingObjects" default="false" />
->>>>>>> master
 
         <group unless="$(arg movingObjects)">
                 <include file="$(find gazebo_ros)/launch/empty_world.launch">
