@@ -32,8 +32,8 @@
 		<param name="frameID" value="/rslidar_projected"/>
 		<param name="laserAltitude" value="0.4"/>
 		<param name="yaw" value="0"/>
-		<param name="pitch" value="0"/>
-		<param name="roll" value="0"/>
+		<param name="pitch" value="0.05"/>
+		<param name="roll" value="-0.05"/>
 		<param name="frameYaw" value="0"/>
 		<param name="framePitch" value="0"/>
 		<param name="frameRoll" value="0"/>
