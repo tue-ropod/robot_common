@@ -25,12 +25,13 @@
     <param name="intensity_mode" value="1"/>
   </node>
 
-  <node pkg="tf" type="static_transform_publisher" name="tf_link_robosense_0" args="-0.12 0.07 0.74 0.03 0 0 /ropod/base_link /rslidar 33" />
+  <node pkg="tf" type="static_transform_publisher" name="tf_link_robosense_0" args="0.0 0.0 0.74 0.00 0 0 /ropod/base_link /rslidar 33" />
+  <!--node pkg="tf" type="static_transform_publisher" name="tf_link_robosense_0" args="0.0 0.0 0.74 0.00 0 0 /ropod/base_link /rslidar 33" /-->
   <node pkg="tf" type="static_transform_publisher" name="tf_link_robosense_front" args="0 0 0 0 0 0 /rslidar /rslidar_projected_front 33" />
   <node pkg="tf" type="static_transform_publisher" name="tf_link_robosense_back" args="0 0 0 3.14 0 0 /rslidar /rslidar_projected_back 33" />
 
   	<node pkg="point_cloud_projection" type="point_cloud_projector" name="PointCloudProjector" output="screen">
-		<remap from="/points" to="/rslidar_points"/>
+        <remap from="/points" to="/rslidar_points"/>
 		<param name="frameIDFront" value="/rslidar_projected_front"/>
 		<param name="frameIDBack" value="/rslidar_projected_back"/>
 		<param name="laserAltitude" value="0.4"/>
@@ -55,6 +56,9 @@
 		<param name="ceilingTolerance" value="0.3"/>
 		<param name="rowSampling" value="1"/>
 		<param name="colSampling" value="1"/>
+		<param name="maxIntensity" value="30"/>
+		<param name="filterScanStart" value="0"/>
+		<param name="filterScanEnd" value="4"/>
 	</node>
 
 </launch>
