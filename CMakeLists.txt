@@ -9,8 +9,6 @@ include_directories(${roscpp_INCLUDE_DIRS})
 include_directories(${std_msgs_INCLUDE_DIRS})
 
 find_package(catkin REQUIRED COMPONENTS
-    geolib2
-    code_profiler
     roslib   
     roscpp
     std_msgs
